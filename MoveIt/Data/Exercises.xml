@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<exercises>
+  <!-- CARDIO -->
+  <exercise Name = "Walk the Stairs"	Url = "http://www.allyou.com/diet-fitness/at-home-workouts/lose-weight-00400000048774/page2.html"	Picture = "WalkStairs.png"	Category = "Cardio" />
+  <exercise Name = "Run in Place"		  Url = "http://www.youtube.com/watch?v=whmUeG0saAM"	Picture = "RunInPlace.png"	      Category = "Cardio" />
+  <exercise Name = "Jump Rope"			Url = "http://www.youtube.com/watch?v=GT3wrmymrMc"	Picture = "JumpRope.png"	          Category = "Cardio" />
+  <exercise Name = "Jumping Jacks"	  Url = "http://www.youtube.com/watch?v=yX3jDRILmIg"	Picture = "JumpingJacks.png"	    Category = "Cardio" />
+  <exercise Name = "Quick Feet"			Url = "http://www.youtube.com/watch?v=wJ_yxvBKsII"	Picture = "QuickFeet.png"	          Category = "Cardio" />
+  <exercise Name = "Burpees"				Url = "http://www.youtube.com/watch?v=hyWs1BxJKGI"	Picture = "Burpees.png"	            Category = "Cardio" />
+  <exercise Name ="Mountain Climbers" Url = "http://www.youtube.com/watch?v=XX2bBNWixuc"	Picture = "MountainClimbers.png"	Category = "Cardio" />
+  <exercise Name = "Plie and Reach"	  Url = "http://www.youtube.com/watch?v=zqGQ4HZpaiU"	Picture = "PlieReach.png"	        Category = "Cardio" />
+  <exercise Name = "Squat Thrusts"	  Url = "http://www.youtube.com/watch?v=YqPTgoHW42M"	Picture = "SquatThrusts.png"	    Category = "Cardio" />
+
+  <!-- Resistance (no weights) -->
+  <exercise Name = "Pushups"			Url = "http://www.youtube.com/watch?v=jumbk7Hh9gA"	Picture = "Pushup.png"	    Category = "Strength" />
+  <exercise Name = "Situps"			  Url = "http://www.topendsports.com/fitness/technique/situp-home.htm"	Picture = "SitUp.png"	Category = "Strength" />
+  <exercise Name = "Plank"			  Url = "http://www.youtube.com/watch?v=AR9vRt7XOtY"	Picture = "Plank.png"	      Category = "Strength" />
+  <exercise Name = "Tricep Dips"  Url = "http://www.youtube.com/watch?v=dpPIhrmNrpA"	Picture = "TricepDips.png"	Category = "Strength" />
+  <exercise Name = "Butt Lifts"		Url = "http://www.youtube.com/watch?v=R5mZtlKno_o"	Picture = "ButtLifts.png"	  Category = "Strength" />
+  <exercise Name = "Squats"			  Url = "http://www.youtube.com/watch?v=oKQIXSBb-ak"	Picture = "Squat.png"	      Category = "Strength" />
+  <exercise Name = "Lunges"			  Url = "http://www.youtube.com/watch?v=29LraQvkP_U"	Picture = "Lunges.png"	    Category = "Strength" />
+  <exercise Name = "Wall Sit"			Url = "http://www.youtube.com/watch?v=X_Y6P0460g0"	Picture = "WallSit.png"	    Category = "Strength" />
+
+  <!-- Stretches -->
+  <exercise Name = "Deadlift Stretch"				  Url = "http://www.youtube.com/watch?v=oZC6m2XDddY"	 Picture = "DeadliftStretch.png"	    Category = "Stretch" />
+  <exercise Name = "Seated Toe Touch Stretch" Url = "http://www.youtube.com/watch?v=7MfgqvElmkQ"	Picture = "SeatedToeTouchStretch.png"	Category = "Stretch" />
+  <exercise Name = "Standing Quad Stretch"	  Url = "http://www.youtube.com/watch?v=zh_Pg6IOLrA"	Picture = "QuadStretch.png"         	Category = "Stretch" />
+  <exercise Name = "Arm Circles Stretch"		  Url = "http://www.youtube.com/watch?v=TXPkH8LTMyA"	Picture = "ArmCirclesStretch.png"   	Category = "Stretch" />
+  <exercise Name = "Standing Back Stretch"	  Url = "http://www.youtube.com/watch?v=zL4HGlWXyV4"	Picture = "StandingBackStretch.png"	  Category = "Stretch" />
+  <exercise Name = "Arm Overhead Stretch"		  Url = "http://www.youtube.com/watch?v=9qZt6N54OeU"	Picture = "ArmOverheadStretch.png"	  Category = "Stretch" />
+  <exercise Name = "Child's Pose Stretch"		  Url = "http://www.youtube.com/watch?v=E6BhOVCqReA"	Picture = "ChildsPoseStretch.png"   	Category = "Stretch" />
+  <exercise Name = "Glute Lunge Stretch"		  Url = "http://www.youtube.com/watch?v=voVuSWb6ftQ"	Picture = "GluteLungeStretch.png"	    Category = "Stretch" />
+</exercises>
+

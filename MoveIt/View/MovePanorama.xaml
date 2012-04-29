@@ -1,0 +1,96 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="MoveIt.View.MovePanorama"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:Mvvm="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.WP7" mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <controls:Panorama >
+            <controls:Panorama.TitleTemplate>
+                <DataTemplate>
+                    <TextBlock Text="move it!" Margin="0,75,0,0" FontSize="20" FontFamily="Segoe WP Bold" />
+                </DataTemplate>
+            </controls:Panorama.TitleTemplate>
+
+            <!--Panorama: Just Move -->
+            <controls:PanoramaItem Header="Just Move">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="{Binding MoveInstruction, Mode=OneWay}" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="0"/>
+
+                    <Button Name="DidItButton" Grid.Row="1" HorizontalAlignment="Center" BorderBrush="Transparent" Background="Transparent">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="../Pictures/DidIt.png" Height="100"  />
+                            <TextBlock Text="Did It!" VerticalAlignment="Center" Style="{StaticResource PhoneTextExtraLargeStyle}" />
+                        </StackPanel>
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <Mvvm:EventToCommand Command="{Binding DidItCommand, Mode=OneWay}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
+
+                    <Button Name="SnoozeButton" Content="Snooze" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="0" Grid.Row="2" BorderBrush="Transparent" FontSize="16">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <Mvvm:EventToCommand Command="{Binding SnoozeCommand, Mode=OneWay}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
+                </Grid>
+            </controls:PanoramaItem>
+
+            <!--Panorama: Exercises -->
+            <!-- TODO: Change this to display Exercise CATEGORIES that can then jump into (like "all" in pictures) OR group by category (like "date" in pictures)-->
+            <controls:PanoramaItem Header="Exercises">
+                <ListBox Margin="0,0,-12,0" ItemsSource="{Binding Exercises}" >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Button BorderBrush="Transparent" Background="Transparent">
+                                <StackPanel Orientation="Horizontal" Margin="0">
+                                    <Image Height="100" Width="100" Source="{Binding PictureSource, Mode=OneWay}" Margin="12,0,9,0" />
+                                    <TextBlock Text="{Binding Name, Mode=OneWay}" TextWrapping="Wrap" VerticalAlignment="Center" Style="{StaticResource PhoneTextExtraLargeStyle}" Margin="12,-6,12,0" Width="250" />
+                                </StackPanel>
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="Click">
+                                        <Mvvm:EventToCommand Command="{Binding LoadExerciseCommand, Mode=OneWay}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </Button>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </controls:PanoramaItem>
+
+            <!--Panorama: Cardio -->
+            <controls:PanoramaItem Header="Cardio">
+            </controls:PanoramaItem>
+
+            <!--Panorama: Strength -->
+            <controls:PanoramaItem Header="Strength">
+            </controls:PanoramaItem>
+
+            <!--Panorama: Stretch -->
+            <controls:PanoramaItem Header="Stretch">
+            </controls:PanoramaItem>
+        </controls:Panorama>
+    </Grid>
+
+    <!--Panorama-based applications should not show an ApplicationBar-->
+
+</phone:PhoneApplicationPage>
